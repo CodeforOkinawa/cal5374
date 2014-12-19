@@ -14,3 +14,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'mem'
 gem 'icalendar'
+gem 'pry-rails', group: :development

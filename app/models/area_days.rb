@@ -30,6 +30,8 @@ class AreaDays
     else
       ""
     end
+  rescue
+    ""
   end
   memoize :csv_content
 

@@ -49,6 +49,7 @@ GEM
     json (1.8.1)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mem (0.1.5)
     mime-types (2.4.3)
     minitest (5.5.0)
     multi_json (1.10.1)
@@ -111,6 +112,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  mem
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

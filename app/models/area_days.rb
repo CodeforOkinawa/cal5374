@@ -5,6 +5,8 @@ require 'open-uri'
 class AreaDays
   AREA_COLUMN_NAME = "地名"
 
+  include Mem
+
   def initialize(url)
     @url = url
   end
@@ -18,6 +20,7 @@ class AreaDays
   def csv
     CSV.parse(csv_content, headers: :first_row)
   end
+  memoize :csv
 
   def csv_content
     response = OpenURI.open_uri(url)
@@ -28,8 +31,10 @@ class AreaDays
       ""
     end
   end
+  memoize :csv_content
 
   def url
     URI.join(@url, 'data/area_days.csv')
   end
+  memoize :url
 end

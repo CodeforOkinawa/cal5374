@@ -17,3 +17,4 @@ gem 'mem'
 gem 'icalendar'
 gem 'pry-rails', group: :development
 gem 'rails_12factor'
+gem 'unicorn'

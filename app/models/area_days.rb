@@ -3,6 +3,8 @@ require 'uri'
 require 'open-uri'
 
 class AreaDays
+  class NotFound < StandardError; end
+
   AREA_COLUMN_NAME = "地名"
 
   include Mem
@@ -12,7 +14,9 @@ class AreaDays
   end
 
   def find(area)
-    csv.detect {|row| row[AREA_COLUMN_NAME] == area }.to_h
+    csv.detect {|row|
+      row[AREA_COLUMN_NAME] == area
+    } or raise NotFound, "地名「#{area}」がurl「#{url}」で見つかりませんでした。"
   end
 
   private

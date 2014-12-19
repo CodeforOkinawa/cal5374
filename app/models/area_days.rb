@@ -41,6 +41,8 @@ class AreaDays
 
   def url
     URI.join(@url, 'data/area_days.csv')
+  rescue
+    @url
   end
   memoize :url
 end

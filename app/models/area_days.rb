@@ -6,6 +6,7 @@ class AreaDays
   class NotFound < StandardError; end
 
   AREA_COLUMN_NAME = "地名"
+  CENTER_COLUMN_NAME = "センター"
 
   include Mem
 

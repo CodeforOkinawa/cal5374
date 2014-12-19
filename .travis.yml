@@ -1,0 +1,7 @@
+deploy:
+  provider: heroku
+  api_key:
+    secure: eAzAQ/kLYUywzifZQmhtN5M1YsDwId6MQtIuBfjR951toXPS5nHT4haZG3hVKSMo3kkcBB7SWO54fgO5QasuPJGeLj6WODNyQfDIvam3n+OFfr0RTrLOMFdMVEEuXa/Ee3WVTRrECh0MB/v0DSI90CBtRjZwb7CHOMMudioNbLs=
+  app: cal5374
+  on:
+    repo: CodeforOkinawa/cal5374

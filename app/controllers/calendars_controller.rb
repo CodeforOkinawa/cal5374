@@ -8,6 +8,7 @@ class CalendarsController < ApplicationController
         filename = ERB::Util.url_encode("#{@calendar.calname}.ics")
         send_data(current_calendar.to_s, filename: filename)
       end
+      format.html
     end
   end
 

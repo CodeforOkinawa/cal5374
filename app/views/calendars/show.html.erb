@@ -1,0 +1,10 @@
+<h1>5374ウィジェット</h1>
+<h2>5374ウェブサイト:</h2>
+<%= link_to params[:site], params[:site] %>
+<h2>iCalウィジェット:</h2>
+<textarea>
+<%= link_to 'iCal', calendar_path(site: params[:site]), class: 'cal5374' %>
+TODO: 上記リンクの位置にHTMLを差し込むJSを書く
+</textarea>
+<h2>iCalダウンロード</h2>
+TODO: 地域別のiCalへのリンクを貼る

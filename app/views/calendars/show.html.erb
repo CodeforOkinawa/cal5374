@@ -2,9 +2,24 @@
 <h2>5374ウェブサイト:</h2>
 <%= link_to params[:site], params[:site] %>
 <h2>iCalウィジェット:</h2>
+<p>あなたの5374のbodyの終了タグの手前、scriptタグの末尾に貼ってください。</p>
 <textarea>
-<%= link_to 'iCal', calendar_url(site: params[:site]), class: 'cal5374 btn btn-default', data: {title: 'iCal', site: params[:site], ics: calendar_url(format: :ics)} %>
-<%= javascript_include_tag calendar_url(format: :js) %>
+  <%= link_to 'iCal', calendar_url(site: params[:site]), class: 'cal5374 btn btn-default', data: {title: 'iCal', site: params[:site], ics: calendar_url(format: :ics)} %>
+  <%= javascript_include_tag calendar_url(format: :js) %>
 </textarea>
+<h3>例:</h3>
+<pre>
+<code>
+  (前略)
+
+  &lt;/script&gt;
+  <%= link_to('iCal', calendar_url(site: params[:site]), class: 'cal5374 btn btn-default', data: {title: 'iCal', site: params[:site], ics: calendar_url(format: :ics)}).to_str %>
+  <%= link_to(javascript_include_tag calendar_url(format: :js)).to_str %>
+&lt;/body&gt;
+
+(後略)
+</code>
+</pre>
+<br/>
 <h2>iCalダウンロード</h2>
 TODO: 地域別のiCalへのリンクを貼る

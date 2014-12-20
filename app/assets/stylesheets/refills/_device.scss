@@ -9,11 +9,10 @@ $device-text-color: white;
 $device-background-top: #162C4C;
 $device-background-bottom: #0A120D;
 $gradient-angle: 10deg;
-$device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 $device-screen-image: asset-path("calendar_screen.png");
 
 .device-background {
-  @include background(url($device-image), linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
+  @include background(linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

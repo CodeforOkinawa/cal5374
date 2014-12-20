@@ -1,6 +1,7 @@
 @import "bourbon";
 @import "base/base";
 @import "neat";
+@import "refills/device";
 
 div.container {
   @include outer-container;

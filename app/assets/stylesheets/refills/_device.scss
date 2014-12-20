@@ -6,7 +6,7 @@ $device-background: darken(gray, 40);
 $device-backside-background: darken($device-background, 10);
 $device-text-color: white;
 
-$device-background-top: #162C4C; 
+$device-background-top: #162C4C;
 $device-background-bottom: #0A120D;
 $gradient-angle: 10deg;
 $device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
@@ -48,12 +48,12 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
 
   @include media($large-screen) {
     @include transform(
-      perspective(800px) 
-      translateX(0px) 
-      translateY(-100px) 
-      translateZ(50px) 
-      rotateX(0deg) 
-      rotateY(-20deg) 
+      perspective(800px)
+      translateX(0px)
+      translateY(-100px)
+      translateZ(50px)
+      rotateX(0deg)
+      rotateY(-20deg)
       rotateZ(-0deg));
     display: block;
     float: right;
@@ -63,8 +63,8 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
     width: $device-screen-width + (2 * $device-padding-horizontal);
     border-radius: 2em;
     background: $device-background;
-    box-shadow: 
-      1px 0px lighten($device-backside-background, 20), 
+    box-shadow:
+      1px 0px lighten($device-backside-background, 20),
       4px 0px lighten($device-backside-background, 2),
       7px 0px $device-backside-background,
       10px 0px $device-backside-background,

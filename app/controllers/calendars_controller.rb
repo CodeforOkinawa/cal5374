@@ -1,6 +1,6 @@
 class CalendarsController < ApplicationController
   before_action :confirm_site_domain
-  before_action :current_area_days
+  before_action :current_area_days, if: 'request.format == :ics'
 
   def show
     @calendar = current_calendar

@@ -6,3 +6,6 @@
 div.container {
   @include outer-container;
 }
+.note {
+  font-size: $base-font-size * 0.75;
+}

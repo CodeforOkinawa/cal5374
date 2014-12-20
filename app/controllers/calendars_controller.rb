@@ -5,7 +5,7 @@ class CalendarsController < ApplicationController
   def show
     respond_to do |format|
       format.ics do
-        filename = ERB::Util.url_encode("#{@calendar.calname}.ics")
+        filename = ERB::Util.url_encode("#{current_calendar.calname}.ics")
         send_data(current_calendar.to_s, filename: filename)
       end
       format.html

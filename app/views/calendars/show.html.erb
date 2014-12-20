@@ -3,7 +3,7 @@
 <%= link_to params[:site], params[:site] %>
 <h2>iCalウィジェット:</h2>
 <textarea>
-<%= link_to 'iCal', calendar_path(site: params[:site]), class: 'cal5374' %>
+<%= link_to 'iCal', calendar_path, class: 'cal5374', data: {site: params[:site]} %>
 TODO: 上記リンクの位置にHTMLを差し込むJSを書く
 </textarea>
 <h2>iCalダウンロード</h2>

@@ -2,8 +2,14 @@
 
 <a href="http://5374.jp">5374.jp</a>で提供されているゴミ収集日をカレンダーのスケジュールに変換するサービスです。
 
+※現在、センターに対応しておりません。
+
 <%= form_tag calendar_path, method: :get do %>
   <%= label_tag :site, "5374ウェブサイトのURL:" %>
   <%= url_field_tag :site, '', placeholder: '例: http://naha.5374.jp', required: true %>
   <%= submit_tag '5374ウィジェットを作成' %>
 <% end %>
+
+ご不明な点や問題がございましたら<a href="https://github.com/CodeforOkinawa/cal5374/issues">GitHubのissueページ</a>でご報告くださると助かります。(※GitHubのアカウントが必要です)
+
+ソースコードは<a href="https://github.com/CodeforOkinawa/cal5374">CodeforOkinawa/cal5374</a>にて公開されております。

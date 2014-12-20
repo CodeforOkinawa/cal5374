@@ -1,7 +1,7 @@
 class CalendarsController < ApplicationController
-  before_action :confirm_site_domain
+  skip_before_action :verify_authenticity_token, if: 'request.format == :js' # for embed
+  before_action :confirm_site_domain, unless: 'request.format == :js'
   before_action :current_area_days, if: 'request.format == :ics'
-
   def show
     respond_to do |format|
       format.ics do
@@ -9,6 +9,7 @@ class CalendarsController < ApplicationController
         send_data(current_calendar.to_s, filename: filename)
       end
       format.html
+      format.js
     end
   end
 

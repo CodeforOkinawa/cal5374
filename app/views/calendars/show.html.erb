@@ -3,8 +3,8 @@
 <%= link_to params[:site], params[:site] %>
 <h2>iCalウィジェット:</h2>
 <textarea>
-<%= link_to 'iCal', calendar_path, class: 'cal5374', data: {site: params[:site], calendarUrl: calendar_url(format: :ics)} %>
-TODO: 上記リンクの位置にHTMLを差し込むJSを書く
+<%= link_to 'iCal', calendar_url(site: params[:site]), class: 'cal5374 btn btn-default', data: {title: 'iCal', site: params[:site], ics: calendar_url(format: :ics)} %>
+<%= javascript_include_tag calendar_url(format: :js) %>
 </textarea>
 <h2>iCalダウンロード</h2>
 TODO: 地域別のiCalへのリンクを貼る

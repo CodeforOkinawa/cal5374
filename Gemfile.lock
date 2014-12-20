@@ -28,6 +28,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -57,6 +60,9 @@ GEM
     mime-types (2.4.3)
     minitest (5.5.0)
     multi_json (1.10.1)
+    neat (1.5.1)
+      bourbon (>= 3.1)
+      sass (~> 3.2.19)
     pg (0.17.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -136,6 +142,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mem
+  neat
   pg
   pry-rails
   rails (= 4.1.8)

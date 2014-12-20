@@ -3,8 +3,6 @@ class CalendarsController < ApplicationController
   before_action :current_area_days, if: 'request.format == :ics'
 
   def show
-    @calendar = current_calendar
-
     respond_to do |format|
       format.ics do
         filename = ERB::Util.url_encode("#{@calendar.calname}.ics")

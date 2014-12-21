@@ -5,6 +5,7 @@
 <h2>このページのURL:</h2>
 <%= link_to calendar_url(site: params[:site]), calendar_url(site: params[:site]) %>
 <h2>iCalウィジェット:</h2>
+<%= render 'refills/browser' %>
 <p>あなたの5374のbodyの終了タグの手前、scriptタグの末尾に貼ってください。</p>
 <textarea>
   <%= link_to 'iCal', calendar_url(site: params[:site]), class: 'cal5374 btn btn-default', data: {title: 'iCal', site: params[:site], ics: calendar_url(format: :ics)} %>

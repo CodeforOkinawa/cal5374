@@ -22,4 +22,19 @@
 </pre>
 <br/>
 <h2>iCalダウンロード</h2>
-TODO: 地域別のiCalへのリンクを貼る
+<% if @area_days.any? %>
+  <table>
+    <tr>
+      <th>地名</th>
+    </tr>
+  <% @area_days.each do |area_days| %>
+    <tr>
+      <td><%= link_to(area_days[AreaDays::AREA_COLUMN_NAME], calendar_url(format: :ics, site: params[:site], area: area_days[AreaDays::AREA_COLUMN_NAME])) %></td>
+    </tr>
+  <% end %>
+  </table>
+<% else %>
+<div class="flash-alert">
+  <span><%= link_to('CSV', @area_days.url) %>の中に地域の情報が見つかりません。</span>
+</div>
+<% end %>

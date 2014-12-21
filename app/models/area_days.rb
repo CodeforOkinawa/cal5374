@@ -8,6 +8,7 @@ class AreaDays
   AREA_COLUMN_NAME = "地名"
   CENTER_COLUMN_NAME = "センター"
 
+  include Enumerable
   include Mem
 
   def initialize(url)
@@ -18,6 +19,12 @@ class AreaDays
     csv.detect {|row|
       row[AREA_COLUMN_NAME] == area
     } or raise NotFound, "地名「#{area}」がurl「#{url}」で見つかりませんでした。"
+  end
+
+  def each
+    csv.each do |row|
+      yield row
+    end
   end
 
   def url

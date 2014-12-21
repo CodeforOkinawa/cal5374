@@ -21,7 +21,7 @@ class AreaDays
   end
 
   def url
-    URI.join(@url, 'data/area_days.csv')
+    URI.join(@url, 'data/area_days.csv').to_s
   rescue
     @url
   end

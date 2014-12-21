@@ -19,8 +19,12 @@ class CalendarsController < ApplicationController
     @current_calendar ||= Calendar.new(current_area_days)
   end
 
+  def area_days
+    AreaDays.new(params[:site])
+  end
+
   def current_area_days
-    @current_area_days ||= AreaDays.new(params[:site]).find(params[:area]).to_h
+    @current_area_days ||= area_days.find(params[:area]).to_h
   rescue AreaDays::NotFound => e
     flash.alert = e.message
     redirect_to root_path

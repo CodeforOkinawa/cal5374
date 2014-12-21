@@ -20,6 +20,13 @@ class AreaDays
     } or raise NotFound, "地名「#{area}」がurl「#{url}」で見つかりませんでした。"
   end
 
+  def url
+    URI.join(@url, 'data/area_days.csv')
+  rescue
+    @url
+  end
+  memoize :url
+
   private
 
   def csv
@@ -39,11 +46,4 @@ class AreaDays
     ""
   end
   memoize :csv_content
-
-  def url
-    URI.join(@url, 'data/area_days.csv')
-  rescue
-    @url
-  end
-  memoize :url
 end

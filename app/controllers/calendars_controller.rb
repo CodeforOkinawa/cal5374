@@ -22,7 +22,8 @@ class CalendarsController < ApplicationController
   def current_area_days
     @current_area_days ||= AreaDays.new(params[:site]).find(params[:area]).to_h
   rescue AreaDays::NotFound => e
-    render text: e.message
+    flash.alert = e.message
+    redirect_to root_path
   end
 
   def confirm_site_domain
@@ -31,9 +32,10 @@ class CalendarsController < ApplicationController
 
     return if site_domain.try(:subdomain_of?, valid_site_domain)
 
-    render text: <<-NOTICE.strip_heredoc
+    flash.alert = <<-NOTICE.strip_heredoc
       5374.jpのサブドメインのウェブサイトにのみ対応しています。
       指定されたウェブサイトのURL「#{params[:site]}」
     NOTICE
+    redirect_to root_path(site: params[:site])
   end
 end

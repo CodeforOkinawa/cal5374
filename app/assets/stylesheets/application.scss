@@ -2,6 +2,7 @@
 @import "base/base";
 @import "neat";
 @import "refills/device";
+@import "refills/flashes";
 
 div.container {
   @include outer-container;

@@ -1,6 +1,8 @@
 <h1>5374ウィジェット</h1>
 <h2>5374ウェブサイト:</h2>
 <%= link_to params[:site], params[:site] %>
+<h2>このウィジェットページのURL:</h2>
+<%= link_to calendar_url(site: params[:site]), calendar_url(site: params[:site]) %>
 <h2>iCalウィジェット:</h2>
 <p>あなたの5374のbodyの終了タグの手前、scriptタグの末尾に貼ってください。</p>
 <textarea>

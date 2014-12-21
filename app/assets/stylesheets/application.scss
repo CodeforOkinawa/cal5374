@@ -5,6 +5,23 @@
 @import "refills/device";
 @import "refills/flashes";
 
+pre, code {
+  font-family: monaco;
+  background: #F7F7F7;
+  padding: .1em .4em;
+  font-size: .7em;
+  font-style: normal;
+}
+
+pre, .description code {
+  border: 1px solid #E0E0E0;
+  border-radius: $base-border-radius * 1.5;
+}
+
+.description code {
+  white-space: nowrap;
+}
+
 div.container {
   @include outer-container;
 }

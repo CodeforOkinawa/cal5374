@@ -1,11 +1,11 @@
 <div class="device-background">
   <div class="device-text">
-    <h4>Cal5374</h4>
-    <p><a href="http://5374.jp">5374.jp</a>で提供されているゴミ収集日をカレンダーのスケジュールに変換するサービスです。</p>
+    <h4>ゴミ収集日をいつものカレンダーへ</h4>
+    <p><a href="http://5374.jp">5374.jp</a>で提供されているゴミ収集日をスマホ/PCで使えるカレンダーのスケジュールに変換するサービスです。</p>
     <%= form_tag calendar_path, method: :get do %>
     <%= label_tag :site, "5374ウェブサイトのURL:" %>
     <%= url_field_tag :site, params[:site], placeholder: '例: http://naha.5374.jp', required: true %>
-    <%= submit_tag '5374ウィジェットを作成' %>
+    <%= submit_tag '5374をiCal形式に変換' %>
     <% end %>
   </div>
   <div class="device">

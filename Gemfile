@@ -23,3 +23,5 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills', github: 'thoughtbot/refills'
+
+gem 'nokogiri', group: :development

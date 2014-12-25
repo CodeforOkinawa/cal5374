@@ -17,3 +17,5 @@
 
 # Ignore bundle installed files
 vendor/bundle
+
+public/5374

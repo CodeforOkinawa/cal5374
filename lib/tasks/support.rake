@@ -7,7 +7,7 @@ task support: :environment do
     csv_content = File.read(csv_path)
     csv = CSV.parse(csv_content, headers: :first_row)
     garbage_columns = csv.headers.reject {|h|
-      %w(町名 地名 センター).any?(&h.try(:method, :include?))
+      %w(地区 町名 地名 センター).any?(&h.try(:method, :include?))
     }
     schedule = csv.to_enum(:each).map {|row|
       row.to_h.values_at(*garbage_columns)

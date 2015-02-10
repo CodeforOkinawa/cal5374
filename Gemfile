@@ -16,7 +16,7 @@ gem 'spring', group: :development
 gem 'mem'
 gem 'icalendar'
 gem 'pry-rails', group: :development
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'unicorn'
 
 gem 'bourbon'

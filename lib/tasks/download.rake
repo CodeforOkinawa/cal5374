@@ -1,5 +1,9 @@
-require 'nokogiri'
-require 'open-uri'
+begin
+  require 'nokogiri'
+  require 'open-uri'
+rescue LoadError
+  # do nothing
+end
 
 desc '各地の5374.jpのdata.csvをダウンロードします'
 task download: :environment do
